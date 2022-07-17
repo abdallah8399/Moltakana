@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AddMinorChatRoomActivity">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+
+            <ImageView
+                android:id="@+id/ivAddMinorChatImage"
+                android:layout_width="272dp"
+                android:layout_height="224dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_add_a_photo_black_24dp" />
+
+
+            <CheckBox
+                android:id="@+id/setVIP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:text="مميزة" />
+
+            <EditText
+                android:id="@+id/etAddMinorChatName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="اسم الغرفة"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etAddOwnerrMinorChatName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="المالك"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etAddOwnerMinorChatPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="كلمة السر"
+                android:inputType="textPersonName" />
+
+
+            <Button
+                android:id="@+id/btnAddMinorChatRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="اضافة الغرفة" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

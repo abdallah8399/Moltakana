@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGreen"
+    tools:context=".Activities.AddMemberActivity">
+
+
+    <EditText
+        android:id="@+id/et_add_member_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="اسم المستخدم"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/et_add_member_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_add_member_username"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="كلمة المرور"
+        android:inputType="textPassword" />
+
+    <Spinner
+        android:id="@+id/sp_add_member_userType"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/et_add_member_password"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="10dp" />
+
+    <CheckBox
+        android:id="@+id/cb_add_member_close_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/sp_add_member_userType"
+        android:text="قفل جهاز" />
+
+    <TextView
+        android:id="@+id/tv_add_member_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cb_add_member_close_device"
+        android:text="Permissions"
+        android:layout_margin="10dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_add_member_permission"
+        android:layout_above="@+id/layout_add_member">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <CheckBox
+                android:id="@+id/cb_add_member_block_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="حظر جهاز" />
+
+            <CheckBox
+                android:id="@+id/cb_add_member_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/cb_add_member_block_device"
+                android:text="ايقاف" />
+
+            <CheckBox
+                android:id="@+id/cb_add_member_fire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/cb_add_member_stop"
+                android:text="طرد" />
+
+            <CheckBox
+                android:id="@+id/cb_add_member_mic"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cb_add_member_fire"
+                android:text="دور المايك" />
+
+            <CheckBox
+                android:id="@+id/cb_add_member_delete_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="مسح النص للجميع"
+                android:layout_below="@+id/cb_add_member_mic" />
+
+            <CheckBox
+                android:id="@+id/cb_add_member_general_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="رسالة عامة"
+                android:layout_below="@+id/cb_add_member_delete_text"/>
+
+            <CheckBox
+                android:id="@+id/cb_add_member_cancel_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="الغاء الحظر"
+                android:layout_below="@+id/cb_add_member_general_message"/>
+
+            <CheckBox
+                android:id="@+id/cb_add_member_logout_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="سجل الخروج"
+                android:layout_below="@+id/cb_add_member_cancel_block"/>
+
+            <CheckBox
+                android:id="@+id/cb_add_member_account_management"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="ادارة الحسابات"
+                android:layout_below="@+id/cb_add_member_logout_history"/>
+
+            <CheckBox
+                android:id="@+id/cb_add_member_manage_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="ادارة ممبر"
+                android:layout_below="@+id/cb_add_member_account_management"/>
+
+            <CheckBox
+                android:id="@+id/cb_add_member_manage_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="ادارة ادمن"
+                android:layout_below="@+id/cb_add_member_manage_member"/>
+
+            <CheckBox
+                android:id="@+id/cb_add_member_manage_super_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="ادارة سوبر ادمن"
+                android:layout_below="@+id/cb_add_member_manage_admin"/>
+
+            <CheckBox
+                android:id="@+id/cb_add_member_manage_master"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:text="ادارة ماستر"
+                android:layout_below="@+id/cb_add_member_manage_super_admin"/>
+
+            <CheckBox
+                android:id="@+id/cb_add_member_manage_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="اعدادات الغرفة"
+                android:layout_below="@+id/cb_add_member_manage_master"/>
+
+            <CheckBox
+                android:id="@+id/cb_add_member_supervisors_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="تقارير المشرفين"
+                android:layout_below="@+id/cb_add_member_manage_room"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:id="@+id/layout_add_member"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_add_member_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/darkGreen"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="24dp"
+            android:text="الغاء" />
+
+        <Button
+            android:id="@+id/btn_add_member_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:background="@color/darkGreen"
+            android:textSize="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="40dp"
+            android:text="اضافة" />
+    </LinearLayout>
+
+
+</RelativeLayout>

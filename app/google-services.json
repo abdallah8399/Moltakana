@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "75085031238",
+    "firebase_url": "https://moltkana.firebaseio.com",
+    "project_id": "moltkana",
+    "storage_bucket": "moltkana.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75085031238:android:80396a0ebbc2087129a747",
+        "android_client_info": {
+          "package_name": "com.wingy.moltakana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "75085031238-ucks2166kom2t3aa99abc3i0jup4m1b3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAN-Fc2ggSWFaq16bAm8yQ8Q35MONo56c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "75085031238-ucks2166kom2t3aa99abc3i0jup4m1b3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

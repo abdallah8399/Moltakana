@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/settings_layout"
+    tools:context=".Activities.SettingsActivity">
+
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_margin="15dp"
+        android:text="الرسائل الخاصة" />
+
+    <Button
+        android:id="@+id/room_settings_activate_private_messages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:text="تفعيل" />
+
+    <Button
+        android:id="@+id/room_settings_color_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:layout_toLeftOf="@+id/textView36"
+        android:layout_below="@+id/textView35"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:text=" " />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_margin="15dp"
+        android:layout_alignParentRight="true"
+        android:textSize="18dp"
+        android:layout_below="@+id/textView33"
+        android:text="اللغة" />
+
+
+
+    <TextView
+        android:id="@+id/room_settings_size_example"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:layout_margin="15dp"
+        android:layout_alignParentRight="true"
+        android:textSize="20dp"
+        android:layout_above="@+id/save_layout"
+        android:layout_below="@+id/textView37"
+        android:gravity="center"
+        android:text="مثال" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/room_settings_radio_group"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:text="اعدادات الكتابة" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView35"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:text="لون الخط" />
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_margin="15dp"
+        android:layout_alignParentRight="true"
+        android:textSize="18dp"
+        android:layout_below="@+id/textView36"
+        android:text="حجم الخط" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_toLeftOf="@+id/textView37"
+        android:layout_below="@+id/textView36"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/textView34"
+        android:layout_alignParentRight="true"
+        android:id="@+id/room_settings_radio_group"
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radioButton16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="العربية" />
+
+        <RadioButton
+            android:id="@+id/radioButton17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="English" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cb_stop_mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView34"
+        android:layout_margin="15dp"
+        android:layout_toLeftOf="@+id/room_settings_radio_group"
+        android:text="ايقاف المايك عند استقبال اتصال" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/save_layout"
+        android:background="@color/green">
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_room_settings_save"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:background="@color/darkGreen"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:text="حفظ">
+        </Button>
+
+    </RelativeLayout>
+</RelativeLayout>

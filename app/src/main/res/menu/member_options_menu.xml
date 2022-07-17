@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="الحالة"
+        android:id="@+id/menu_status"
+        app:showAsAction="never"
+        >
+
+        <menu>
+
+            <item
+                android:title="متاح"
+                android:id="@+id/menu_status_1"
+                app:showAsAction="never"
+                >
+
+            </item>
+
+            <item
+                android:title="مشغول"
+                android:id="@+id/menu_status_2"
+                app:showAsAction="never"
+                >
+
+            </item>
+
+            <item
+                android:title="في الخارج"
+                android:id="@+id/menu_status_3"
+                app:showAsAction="never"
+                >
+
+            </item>
+
+            <item
+                android:title="هاتف"
+                android:id="@+id/menu_status_4"
+                app:showAsAction="never"
+                >
+            </item>
+
+            <item
+                android:title="طعام"
+                android:id="@+id/menu_status_5"
+                app:showAsAction="never"
+                >
+            </item>
+
+            <item
+                android:title="نائم"
+                android:id="@+id/menu_status_6"
+                app:showAsAction="never"
+                >
+            </item>
+
+
+        </menu>
+
+    </item>
+
+    <item
+        android:title="اعدادات"
+        android:id="@+id/menu_settings"
+        app:showAsAction="never"
+        >
+
+    </item>
+
+    <item
+        android:title="عن البرنامج"
+        android:id="@+id/menu_about"
+        app:showAsAction="never"
+        >
+
+    </item>
+    <item
+        android:title="مسح النص"
+        android:id="@+id/menu_delete"
+        app:showAsAction="never"
+        >
+
+    </item>
+    <item
+        android:title="ادارة الغرفة"
+        android:id="@+id/menu_manage_room"
+        app:showAsAction="never"
+        >
+
+    </item>
+
+    <item
+        android:title="تغيير كلمة المرور"
+        android:id="@+id/menu_change_password"
+        app:showAsAction="never"
+        >
+    </item>
+
+    <item
+        android:title="خروج"
+        android:id="@+id/menu_logout"
+        app:showAsAction="never"
+        >
+    </item>
+
+</menu>

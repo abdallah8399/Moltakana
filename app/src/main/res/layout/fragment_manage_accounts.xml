@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGreen"
+    tools:context=".Fragments.ManageAccountFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/manage_account_recycler"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/memberTypesLayout"
+        android:layout_height="match_parent" >
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:id="@+id/memberTypesLayout"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/maLayout"
+            android:orientation="vertical">
+
+
+            <CheckBox
+                android:id="@+id/cbMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:buttonTint="@color/black"
+                android:text="Members" />
+
+            <CheckBox
+                android:id="@+id/cbAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:buttonTint="@color/black"
+                android:text="Admins" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/maLayout"
+            android:id="@+id/smLayout"
+            android:orientation="vertical">
+
+
+            <CheckBox
+                android:id="@+id/cbSAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+
+                android:text="S.Admins" />
+
+            <CheckBox
+                android:id="@+id/cbMaster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:buttonTint="@color/black"
+                android:text="Masters" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:layout_toRightOf="@+id/smLayout"
+            android:id="@+id/atLayout"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivAddMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/grey"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_add_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="TextView" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

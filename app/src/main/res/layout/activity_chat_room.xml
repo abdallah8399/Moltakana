@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/layout_chat_room"
+    android:clickable="true"
+    tools:context=".Activities.ChatRoomActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@color/lightGreen"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_show_room_users"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_alignParentLeft="true"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_people_24dp" />
+
+            <ImageView
+                android:id="@+id/iv_chat_room_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_show_room_users"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_volume_up_black_24dp" />
+
+            <ImageView
+                android:id="@+id/iv_chat_room_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_message_black_24dp" />
+
+            <TextView
+                android:id="@+id/tv_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_chat_room_sound"
+                android:textSize="18dp"
+                android:text="Chat Room"
+                android:textColor="@color/black"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:id="@+id/tv_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_chat_room_sound"
+                android:textColor="@color/black"
+                android:text="counter"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@+id/tv_toolbar_title" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_app_bar"
+        android:layout_above="@+id/layout_message"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ChatRoom_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_message"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+
+        <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_chat_room_mic"
+            android:layout_toLeftOf="@+id/btnEmoji"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:hint="Type a message"
+            app:emojiconSize="28sp"/>
+
+        <ImageView
+            android:id="@+id/ivSendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_send_black_24dp" />
+
+        <ImageView
+            android:id="@+id/btnEmoji"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/ivSendMessage"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+            app:srcCompat="@mipmap/smiley" />
+
+        <ImageView
+            android:id="@+id/iv_chat_room_mic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/iv_chat_room_video"
+            app:srcCompat="@drawable/ic_mic_black_24dp" />
+
+        <ImageView
+            android:id="@+id/iv_chat_room_video"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+            app:srcCompat="@drawable/ic_videocam_black_24dp" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/room_users_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="40dp"
+        android:layout_below="@+id/main_app_bar"
+        tools:layout="@layout/fragment_room_users" />
+    <ImageView
+        android:layout_width="40dp"
+        android:id="@+id/outSide_click"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>
